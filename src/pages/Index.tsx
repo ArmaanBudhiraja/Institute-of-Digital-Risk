@@ -40,15 +40,7 @@ const Index = () => {
       <header ref={headerRef} className="main-header">
         <div className="container header-inner">
           <a href="#" className="logo">
-            <svg viewBox="0 0 280 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 0L0 11.5V34.5L20 40L40 28.5V5.5L20 0Z" fill="#22262E" />
-              <path d="M20 0L40 5.5V28.5L20 40" fill="#F26A2E" />
-              <path d="M20 0L0 11.5L20 23L40 5.5L20 0Z" fill="white" />
-              <path d="M0 11.5L20 23V40L0 34.5V11.5Z" fill="#C8CDD5" />
-              <text fill="#22262E" fontFamily="IBM Plex Sans, sans-serif" fontSize="14" fontWeight="500" letterSpacing="0.02em">
-                <tspan x="52" y="25.5">Institute of Digital Risk</tspan>
-              </text>
-            </svg>
+            <img src="/logo_with_name.png" alt="IDR Logo" />
           </a>
 
           <nav className="main-nav">

@@ -160,8 +160,13 @@ img {
   align-items: center;
 }
 
-.logo svg {
-  height: 32px;
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 48px;
   width: auto;
 }
 

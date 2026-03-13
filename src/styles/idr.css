@@ -74,18 +74,10 @@ h3 {
   color: var(--color-foreground);
 }
 
-/* Highlight effect */
 h1::after,
 h2::after,
 h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 60px;
-  height: 4px;
-  background: var(--color-primary);
-  border-radius: 2px;
+  display: none;
 }
 
 p {

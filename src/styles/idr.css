@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap');
 
 /* ===========================
    1. Root Variables
    =========================== */
 :root {
   --font-family-base: 'IBM Plex Sans', sans-serif;
-  --font-size-h1: clamp(2.5rem, 5vw + 1rem, 4rem);
-  --font-size-h2: clamp(2rem, 4vw + 1rem, 3rem);
+  --font-size-h1: clamp(4rem, 7vw + 1rem, 6.5rem);
+  --font-size-h2: clamp(3rem, 5.5vw + 1rem, 4.5rem);
   --font-size-body: 1rem;
 
   --color-background: hsl(0, 0%, 100%);
@@ -49,15 +49,44 @@ body {
 }
 
 h1, h2, h3 {
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 800;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   text-wrap: balance;
+  position: relative;
 }
 
-h1 { font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); }
-h3 { font-size: 1.25rem; }
+/* H1 */
+h1 {
+  font-size: clamp(3.5rem, 6vw + 1rem, 5.5rem);
+  color: var(--color-foreground);
+}
+
+/* H2 */
+h2 {
+  font-size: clamp(2.6rem, 5vw + 1rem, 4rem);
+  color: var(--color-foreground);
+}
+
+/* H3 */
+h3 {
+  font-size: 1.6rem;
+  color: var(--color-foreground);
+}
+
+/* Highlight effect */
+h1::after,
+h2::after,
+h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 60px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
 
 p {
   text-wrap: pretty;
@@ -296,7 +325,8 @@ img {
 }
 
 .hero-headline {
-  margin-bottom: 1.5rem;
+  font-size: clamp(3rem, 1vw, 3rem);
+  font-weight: 800;
 }
 
 .hero-subheading {
@@ -608,4 +638,12 @@ img {
   .section-title {
     margin-bottom: 2rem;
   }
+}
+h1, h2, h3,
+.hero-headline,
+.section-title,
+.service-card h3,
+.pipeline-step h3,
+.contact-info h3 {
+  font-weight: 800 !important;
 }
